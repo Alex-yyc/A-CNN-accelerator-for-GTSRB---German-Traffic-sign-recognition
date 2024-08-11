@@ -1,0 +1,78 @@
+/*
+// AR 
+`define ARFIFO_DATASIZE   45
+`define ARFIFO_ADDRSIZE   1
+`define ARFIFO_ID_BITS    44:41
+`define ARFIFO_ADDR_BITS  40:9
+`define ARFIFO_LEN_BITS   8:5
+`define ARFIFO_SIZE_BITS  4:2
+`define ARFIFO_BURST_BITS 1:0
+
+// R 
+`define RFIFO_DATASIZE    37
+`define RFIFO_ADDRSIZE    1
+`define RFIFO_ID_BITS     36:33
+`define RFIFO_DATA_BITS   32:1
+`define RFIFO_LAST_BITS   0
+
+// AW 
+`define AWFIFO_DATASIZE   45
+`define AWFIFO_ADDRSIZE   1
+`define AWFIFO_ID_BITS    44:41
+`define AWFIFO_ADDR_BITS  40:9
+`define AWFIFO_LEN_BITS   8:5
+`define AWFIFO_SIZE_BITS  4:2
+`define AWFIFO_BURST_BITS 1:0
+
+// W
+`define WFIFO_DATASIZE    37
+`define WFIFO_ADDRSIZE    1
+`define WFIFO_DATA_BITS   36:5 
+`define WFIFO_WSTRB_BITS  4:1
+`define WFIFO_WLAST_BITS  0
+
+// B
+`define BFIFO_DATASIZE    6
+`define BFIFO_ADDRSIZE    1
+`define BFIFO_ID_BITS     5:2
+`define BFIFO_RESP_BITS   1:0
+*/
+
+//AR 
+`define ARFIFO_DATASIZE   49
+`define ARFIFO_ADDRSIZE   1
+`define ARFIFO_ID_BITS    48:45
+`define ARFIFO_ADDR_BITS  44:13
+`define ARFIFO_LEN_BITS   12:5
+`define ARFIFO_SIZE_BITS  4:2
+`define ARFIFO_BURST_BITS 1:0
+
+// R 
+`define RFIFO_DATASIZE    37
+`define RFIFO_ADDRSIZE    1
+`define RFIFO_ID_BITS     36:33
+`define RFIFO_DATA_BITS   32:1
+`define RFIFO_LAST_BITS   0
+
+// AW 
+`define AWFIFO_DATASIZE   49
+`define AWFIFO_ADDRSIZE   1
+`define AWFIFO_ID_BITS    48:45
+`define AWFIFO_ADDR_BITS  44:13
+`define AWFIFO_LEN_BITS   12:5
+`define AWFIFO_SIZE_BITS  4:2
+`define AWFIFO_BURST_BITS 1:0
+
+// W
+`define WFIFO_DATASIZE    37
+`define WFIFO_ADDRSIZE    1
+`define WFIFO_DATA_BITS   36:5 
+`define WFIFO_WSTRB_BITS  4:1
+`define WFIFO_WLAST_BITS  0
+
+// B
+`define BFIFO_DATASIZE    6
+`define BFIFO_ADDRSIZE    1
+`define BFIFO_ID_BITS     5:2
+`define BFIFO_RESP_BITS   1:0
+

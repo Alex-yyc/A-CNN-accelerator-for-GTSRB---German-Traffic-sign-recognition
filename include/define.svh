@@ -1,0 +1,43 @@
+`define InstAddrBus 31:0
+`define InstBus     31:0
+`define RegAddrBus  4:0
+`define RegBus      31:0
+`define MEM_WRITE   4'b0000
+`define MEM_NOWRITE 4'b1111
+`define DataBus     32
+`define DataAddrBus 12
+
+// Inst type
+`define R_type      7'b0110011
+`define I_type      7'b0010011
+`define I_type_Load 7'b0000011
+`define I_type_JALR 7'b1100111
+`define S_type      7'b0100011
+`define B_type      7'b1100011
+`define U_AUIPC     7'b0010111
+`define U_LUI       7'b0110111
+`define J_type      7'b1101111
+`define CSR_inst    7'b1110011
+
+// ALUop
+`define ALU_ADD     6'd0
+`define ALU_SUB     6'd1
+`define ALU_SLL     6'd2
+`define ALU_SLT     6'd3
+`define ALU_SLTU    6'd4
+`define ALU_XOR     6'd5
+`define ALU_SRL     6'd6
+`define ALU_SRA     6'd7
+`define ALU_OR      6'd8
+`define ALU_AND     6'd9
+`define ALU_BEQ     6'd10
+`define ALU_BNE     6'd11
+`define ALU_BLT     6'd12
+`define ALU_BGE     6'd13
+`define ALU_BLTU    6'd14
+`define ALU_BGEU    6'd15
+`define ALU_JAL     6'd16
+`define ALU_MUL     6'd17
+`define ALU_MULH    6'd18
+`define ALU_MULHSU  6'd19
+`define ALU_MULHU   6'd20

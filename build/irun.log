@@ -1,0 +1,171 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on Jan 15, 2024 at 18:28:00 CST
+irun
+	/home/TsanRenChen/VLSI/0111/final/./sim/top_tb_predicted.sv
+	+incdir+/home/TsanRenChen/VLSI/0111/final/./src+/home/TsanRenChen/VLSI/0111/final/./src/AXI+/home/TsanRenChen/VLSI/0111/final/./include+/home/TsanRenChen/VLSI/0111/final/./sim
+	+define+conv_all
+	+access+r
+	+nc64bit
+	+prog_path=/home/TsanRenChen/VLSI/0111/final/./sim/conv_all
+
+   User defined plus("+") options:
+	+prog_path=/home/TsanRenChen/VLSI/0111/final/./sim/conv_all
+
+Recompiling... reason: file '../sim/top_tb_predicted.sv' is newer than expected.
+	expected: Mon Jan 15 18:27:31 2024
+	actual:   Mon Jan 15 18:28:00 2024
+file: /home/TsanRenChen/VLSI/0111/final/./sim/top_tb_predicted.sv
+    $value$plusargs("prog_path=%s", prog_path);
+                  |
+ncvlog: *W,NOSYST (/home/TsanRenChen/VLSI/0111/final/./sim/top_tb_predicted.sv,185|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+      $fscanf(gf, "%h\n", GOLDEN[num]);
+            |
+ncvlog: *W,NOSYST (/home/TsanRenChen/VLSI/0111/final/./sim/top_tb_predicted.sv,219|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+      $fscanf(pre, "%h\n", predi);
+            |
+ncvlog: *W,NOSYST (/home/TsanRenChen/VLSI/0111/final/./sim/top_tb_predicted.sv,226|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+	module worklib.top_tb_predicted:sv
+		errors: 0, warnings: 3
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		top_tb_predicted
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+    $readmemh({prog_path, "/rom0.hex"}, i_ROM.Memory_byte0);
+                                                         |
+ncelab: *W,MEMODR (../sim/top_tb_predicted.sv,197|57): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/rom1.hex"}, i_ROM.Memory_byte1);
+                                                         |
+ncelab: *W,MEMODR (../sim/top_tb_predicted.sv,198|57): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/rom2.hex"}, i_ROM.Memory_byte2);
+                                                         |
+ncelab: *W,MEMODR (../sim/top_tb_predicted.sv,199|57): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/rom3.hex"}, i_ROM.Memory_byte3);
+                                                         |
+ncelab: *W,MEMODR (../sim/top_tb_predicted.sv,200|57): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/dram0.hex"}, i_DRAM.Memory_byte0);
+                                                           |
+ncelab: *W,MEMODR (../sim/top_tb_predicted.sv,201|59): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/dram1.hex"}, i_DRAM.Memory_byte1);
+                                                           |
+ncelab: *W,MEMODR (../sim/top_tb_predicted.sv,202|59): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/dram2.hex"}, i_DRAM.Memory_byte2);
+                                                           |
+ncelab: *W,MEMODR (../sim/top_tb_predicted.sv,203|59): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/dram3.hex"}, i_DRAM.Memory_byte3);
+                                                           |
+ncelab: *W,MEMODR (../sim/top_tb_predicted.sv,204|59): $readmem default memory order incompatible with IEEE1364.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.top_tb_predicted:sv <0x6a18a943>
+			streams:  46, words: 62579
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                130      77
+		Interfaces:              31       4
+		Registers:             2842    1956
+		Scalar wires:          2600       -
+		Expanded wires:         955      30
+		Vectored wires:        1386       -
+		Named events:             6       6
+		Always blocks:          742     363
+		Initial blocks:           9       9
+		Cont. assignments:      790     910
+		Pseudo assignments:    1334    1290
+		Assertions:               6       6
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.top_tb_predicted:sv
+Loading snapshot worklib.top_tb_predicted:sv .................... Done
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+
+Done
+
+class =    0 : DRAM =        -584
+class =    1 : DRAM =        -773
+class =    2 : DRAM =       -1364
+class =    3 : DRAM =        -824
+class =    4 : DRAM =       -2147
+class =    5 : DRAM =          24
+class =    6 : DRAM =        -601
+class =    7 : DRAM =         968
+class =    8 : DRAM =        -876
+class =    9 : DRAM =         699
+class =   10 : DRAM =        -503
+class =   11 : DRAM =         431
+class =   12 : DRAM =       -1243
+class =   13 : DRAM =       -1797
+class =   14 : DRAM =       -1697
+class =   15 : DRAM =       -2426
+class =   16 : DRAM =        1861
+class =   17 : DRAM =        -989
+class =   18 : DRAM =       -1445
+class =   19 : DRAM =        -598
+class =   20 : DRAM =         143
+class =   21 : DRAM =        -746
+class =   22 : DRAM =       -2516
+class =   23 : DRAM =        -265
+class =   24 : DRAM =        -560
+class =   25 : DRAM =       -1372
+class =   26 : DRAM =       -1581
+class =   27 : DRAM =       -1368
+class =   28 : DRAM =        -783
+class =   29 : DRAM =       -1713
+class =   30 : DRAM =       -1417
+class =   31 : DRAM =        -782
+class =   32 : DRAM =        -455
+class =   33 : DRAM =       -1625
+class =   34 : DRAM =       -1720
+class =   35 : DRAM =       -1265
+class =   36 : DRAM =        -815
+class =   37 : DRAM =        -231
+class =   38 : DRAM =        -482
+class =   39 : DRAM =        -544
+class =   40 : DRAM =          94
+class =   41 : DRAM =         444
+class =   42 : DRAM =         -31
+------------------------------------
+
+
+                                            \     ****************************    /
+      Predict class:          16             \    *   Correct class:   16    *   /
+                                              \   ****************************  /
+                                               \                               /
+                                                             _oo0oo_                     
+                                                            o8888888o                    
+                                                            88' . '88                    
+                                                            (| -_- |)                    
+                                                            0\  =  /0                    
+        ****************************                      ___/`---'\___                  
+        ****************************                    .\"\\|     |// \'.                
+        **                        **                   / \\|||  :   |||// \               
+        **                        **                  / _||||| -:-  |||||- \              
+        **   Congratulations !!   **                 |   | \\\  -  /// |   |             
+        **                        **                 | \_|   ''---/''  |_/ |             
+        **   Simulation PASS!!    **                 \  .-___  '-'  ___/-. /             
+        **                        **               ___'. .'  /--.--\  `. .'___           
+        **                        **            ."" "<  `.___\_<|>_/___." >" "".         
+        **                        **           | | :  `- \`.;`\ _ /`;.`/ - ` : | |       
+        ****************************           \  \ `_.   \_ __\ /__ _/   .-` /  /       
+        ****************************       =====`-.____`.___ \_____/___.-`___.-'=====    
+                                                            `=---='                      
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     
+                                                                                         
+                                                  Buddha Bless NO BUG FOREVER            
+
+
+                       CYCLE       FREQ
+        DRAM    :  30.400000  32.894737
+        ROM     :  50.200000  19.920319
+        SRAM    :  11.000000  90.909091
+        CPU     :  11.500000  86.956522
+        AXI     :  25.000000  40.000000
+Simulation complete via $finish(1) at time 15868913200 PS + 0
+../sim/top_tb_predicted.sv:302     $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on Jan 15, 2024 at 18:28:04 CST  (total: 00:00:04)

@@ -1,0 +1,342 @@
+Warning: Design 'top' has '5' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : top
+Version: T-2022.03
+Date   : Mon Jan 15 10:49:48 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: AXI1/read_sel_reg_0_
+              (rising edge-triggered flip-flop clocked by axi_clk)
+  Endpoint: AXI1/state_reg_1_
+            (rising edge-triggered flip-flop clocked by axi_clk)
+  Path Group: axi_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                enG2000K              fsa0m_a_generic_core_ss1p62v125c
+  AXI                enG30K                fsa0m_a_generic_core_ss1p62v125c
+  interface_slave    enG30K                fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock axi_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  AXI1/read_sel_reg_0_/CK (QDFFRBN)                       0.00 #     1.00 r
+  AXI1/read_sel_reg_0_/Q (QDFFRBN)                        0.53       1.53 r
+  AXI1/interface_s/read_sel[0] (interface_slave)          0.00       1.53 r
+  AXI1/interface_s/U175/O (INV1S)                         0.38       1.91 f
+  AXI1/interface_s/U119/O (ND3)                           0.39       2.30 r
+  AXI1/interface_s/U98/O (INV1S)                          0.22       2.53 f
+  AXI1/interface_s/U67/O (BUF1CK)                         0.21       2.74 f
+  AXI1/interface_s/U60/O (BUF1CK)                         0.61       3.35 f
+  AXI1/interface_s/U172/O (AOI22S)                        0.39       3.74 r
+  AXI1/interface_s/U194/O (OR3B2)                         0.26       4.00 f
+  AXI1/interface_s/RLAST_S (interface_slave)              0.00       4.00 f
+  AXI1/U197/O (ND3)                                       0.32       4.32 r
+  AXI1/U99/O (INV1S)                                      0.21       4.53 f
+  AXI1/U327/O (ND2)                                       0.19       4.72 r
+  AXI1/U102/O (INV1S)                                     0.11       4.83 f
+  AXI1/U101/O (OA12)                                      0.26       5.10 f
+  AXI1/U100/O (NR2)                                       0.18       5.28 r
+  AXI1/U203/O (AN4B1S)                                    0.18       5.46 f
+  AXI1/U201/O (ND3)                                       0.19       5.65 r
+  AXI1/state_reg_1_/D (QDFFRBN)                           0.00       5.65 r
+  data arrival time                                                  5.65
+
+  clock axi_clk (rise edge)                              25.00      25.00
+  clock network delay (ideal)                             1.00      26.00
+  clock uncertainty                                      -0.10      25.90
+  AXI1/state_reg_1_/CK (QDFFRBN)                          0.00      25.90 r
+  library setup time                                     -0.17      25.73
+  data required time                                                25.73
+  --------------------------------------------------------------------------
+  data required time                                                25.73
+  data arrival time                                                 -5.65
+  --------------------------------------------------------------------------
+  slack (MET)                                                       20.08
+
+
+  Startpoint: CPU1/cacheD1/DA/i_data_array
+              (rising edge-triggered flip-flop clocked by cpu_clk)
+  Endpoint: CPU1/myCPU/em/alu_r_reg_11_
+            (rising edge-triggered flip-flop clocked by cpu_clk)
+  Path Group: cpu_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                enG2000K              fsa0m_a_generic_core_ss1p62v125c
+  L1C_data           enG50K                fsa0m_a_generic_core_ss1p62v125c
+  CPU_wrapper        enG200K               fsa0m_a_generic_core_ss1p62v125c
+  load_control       enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  Stage_MEM          enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  mux_2to1_0         enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  mux_5to1           enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  CPU                enG100K               fsa0m_a_generic_core_ss1p62v125c
+  Stage_EX           enG50K                fsa0m_a_generic_core_ss1p62v125c
+  m_alu              enG50K                fsa0m_a_generic_core_ss1p62v125c
+  m_alu_DW_mult_tc_2 enG30K                fsa0m_a_generic_core_ss1p62v125c
+  mux_2to1_3         enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  EX_MEM             enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock cpu_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  CPU1/cacheD1/DA/i_data_array/CK (data_array)            0.00 #     1.00 r
+  CPU1/cacheD1/DA/i_data_array/DO111 (data_array)         3.39       4.39 f
+  CPU1/cacheD1/DA/DO[111] (data_array_wrapper_0)          0.00       4.39 f
+  CPU1/cacheD1/U176/O (ND2F)                              0.10       4.49 r
+  CPU1/cacheD1/U27/O (INV4)                               0.07       4.56 f
+  CPU1/cacheD1/U31/O (NR2F)                               0.09       4.65 r
+  CPU1/cacheD1/U174/O (ND3HT)                             0.21       4.86 f
+  CPU1/cacheD1/core_out[15] (L1C_data)                    0.00       4.86 f
+  CPU1/myCPU/DM_DO[15] (CPU)                              0.00       4.86 f
+  CPU1/myCPU/m/DO_i[15] (Stage_MEM)                       0.00       4.86 f
+  CPU1/myCPU/m/l_c/in[15] (load_control)                  0.00       4.86 f
+  CPU1/myCPU/m/l_c/U25/O (AOI22HT)                        0.25       5.10 r
+  CPU1/myCPU/m/l_c/U27/O (ND2T)                           0.10       5.21 f
+  CPU1/myCPU/m/l_c/U28/O (ND2F)                           0.19       5.40 r
+  CPU1/myCPU/m/l_c/U33/O (ND2S)                           0.12       5.51 f
+  CPU1/myCPU/m/l_c/out[12] (load_control)                 0.00       5.51 f
+  CPU1/myCPU/m/mux2/i1[12] (mux_2to1_0)                   0.00       5.51 f
+  CPU1/myCPU/m/mux2/U50/O (ND2)                           0.14       5.66 r
+  CPU1/myCPU/m/mux2/U51/O (ND2P)                          0.09       5.74 f
+  CPU1/myCPU/m/mux2/result[12] (mux_2to1_0)               0.00       5.74 f
+  CPU1/myCPU/m/mux5/i1[12] (mux_5to1)                     0.00       5.74 f
+  CPU1/myCPU/m/mux5/U14/O (ND2P)                          0.12       5.86 r
+  CPU1/myCPU/m/mux5/U13/O (ND2T)                          0.11       5.98 f
+  CPU1/myCPU/m/mux5/result[12] (mux_5to1)                 0.00       5.98 f
+  CPU1/myCPU/m/result_o[12] (Stage_MEM)                   0.00       5.98 f
+  CPU1/myCPU/e/MEM_result_i[12] (Stage_EX)                0.00       5.98 f
+  CPU1/myCPU/e/muxB/i3[12] (mux_3to1_0)                   0.00       5.98 f
+  CPU1/myCPU/e/muxB/U101/O (AO222P)                       0.40       6.38 f
+  CPU1/myCPU/e/muxB/result[12] (mux_3to1_0)               0.00       6.38 f
+  CPU1/myCPU/e/malu/in1[12] (m_alu)                       0.00       6.38 f
+  CPU1/myCPU/e/malu/U20/O (INV4)                          0.14       6.51 r
+  CPU1/myCPU/e/malu/U19/O (INV12CK)                       0.15       6.66 f
+  CPU1/myCPU/e/malu/mult_30/a[12] (m_alu_DW_mult_tc_2)
+                                                          0.00       6.66 f
+  CPU1/myCPU/e/malu/mult_30/U2933/O (XOR2HT)              0.22       6.88 f
+  CPU1/myCPU/e/malu/mult_30/U2930/O (INV12)               0.14       7.02 r
+  CPU1/myCPU/e/malu/mult_30/U2924/O (BUF12CK)             0.26       7.28 r
+  CPU1/myCPU/e/malu/mult_30/U3182/O (OR2)                 0.27       7.55 r
+  CPU1/myCPU/e/malu/mult_30/U2878/O (ND2T)                0.07       7.62 f
+  CPU1/myCPU/e/malu/mult_30/U1177/CO (FA1)                0.48       8.10 f
+  CPU1/myCPU/e/malu/mult_30/U4109/O (XOR2H)               0.29       8.39 f
+  CPU1/myCPU/e/malu/mult_30/U2774/O (XOR2HP)              0.23       8.62 f
+  CPU1/myCPU/e/malu/mult_30/U4110/O (ND2S)                0.19       8.80 r
+  CPU1/myCPU/e/malu/mult_30/U4315/O (ND3)                 0.16       8.97 f
+  CPU1/myCPU/e/malu/mult_30/U4863/S (FA1)                 0.72       9.69 f
+  CPU1/myCPU/e/malu/mult_30/U1140/S (FA1)                 0.32      10.01 r
+  CPU1/myCPU/e/malu/mult_30/U4889/O (OR2T)                0.21      10.22 r
+  CPU1/myCPU/e/malu/mult_30/U4464/O (ND2F)                0.10      10.32 f
+  CPU1/myCPU/e/malu/mult_30/U2997/O (OAI12HP)             0.21      10.53 r
+  CPU1/myCPU/e/malu/mult_30/U2992/O (AOI12HT)             0.08      10.61 f
+  CPU1/myCPU/e/malu/mult_30/U2977/O (OAI12HT)             0.22      10.82 r
+  CPU1/myCPU/e/malu/mult_30/U2976/O (AOI12HT)             0.13      10.95 f
+  CPU1/myCPU/e/malu/mult_30/U2973/O (BUF12CK)             0.20      11.15 f
+  CPU1/myCPU/e/malu/mult_30/U4776/O (OAI12HS)             0.23      11.38 r
+  CPU1/myCPU/e/malu/mult_30/U4991/O (XNR2HS)              0.22      11.60 r
+  CPU1/myCPU/e/malu/mult_30/product_43_ (m_alu_DW_mult_tc_2)
+                                                          0.00      11.60 r
+  CPU1/myCPU/e/malu/U68/O (MOAI1H)                        0.14      11.74 f
+  CPU1/myCPU/e/malu/U67/O (ND2T)                          0.15      11.89 r
+  CPU1/myCPU/e/malu/result[11] (m_alu)                    0.00      11.89 r
+  CPU1/myCPU/e/mux_alu/i2[11] (mux_2to1_3)                0.00      11.89 r
+  CPU1/myCPU/e/mux_alu/U47/OB (MXL2HP)                    0.12      12.00 f
+  CPU1/myCPU/e/mux_alu/U14/O (INV6CK)                     0.08      12.09 r
+  CPU1/myCPU/e/mux_alu/result[11] (mux_2to1_3)            0.00      12.09 r
+  CPU1/myCPU/e/ALU_result_o[11] (Stage_EX)                0.00      12.09 r
+  CPU1/myCPU/em/ALU_result_i[11] (EX_MEM)                 0.00      12.09 r
+  CPU1/myCPU/em/U4/O (ND2T)                               0.07      12.15 f
+  CPU1/myCPU/em/U49/O (ND2T)                              0.08      12.24 r
+  CPU1/myCPU/em/alu_r_reg_11_/D (QDFFRBS)                 0.00      12.24 r
+  data arrival time                                                 12.24
+
+  clock cpu_clk (rise edge)                              11.50      11.50
+  clock network delay (ideal)                             1.00      12.50
+  clock uncertainty                                      -0.10      12.40
+  CPU1/myCPU/em/alu_r_reg_11_/CK (QDFFRBS)                0.00      12.40 r
+  library setup time                                     -0.16      12.24
+  data required time                                                12.24
+  --------------------------------------------------------------------------
+  data required time                                                12.24
+  data arrival time                                                -12.24
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: DRAM1/ARADDR_reg_reg_2_
+              (rising edge-triggered flip-flop clocked by dram_clk)
+  Endpoint: DRAM1/ARADDR_reg_reg_31_
+            (rising edge-triggered flip-flop clocked by dram_clk)
+  Path Group: dram_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                enG2000K              fsa0m_a_generic_core_ss1p62v125c
+  DRAM_wrapper       enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  DRAM_wrapper_DW01_add_1_DW01_add_147
+                     enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock dram_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  DRAM1/ARADDR_reg_reg_2_/CK (QDFFRBN)                    0.00       1.00 r
+  DRAM1/ARADDR_reg_reg_2_/Q (QDFFRBN)                     0.48       1.48 f
+  DRAM1/r433/A[2] (DRAM_wrapper_DW01_add_1_DW01_add_147)
+                                                          0.00       1.48 f
+  DRAM1/r433/U19/O (AN2)                                  0.30       1.78 f
+  DRAM1/r433/U20/O (AN2)                                  0.27       2.05 f
+  DRAM1/r433/U21/O (AN2)                                  0.27       2.31 f
+  DRAM1/r433/U8/O (AN2)                                   0.27       2.58 f
+  DRAM1/r433/U9/O (AN2)                                   0.27       2.85 f
+  DRAM1/r433/U22/O (AN2)                                  0.27       3.12 f
+  DRAM1/r433/U23/O (AN2)                                  0.27       3.39 f
+  DRAM1/r433/U24/O (AN2)                                  0.27       3.66 f
+  DRAM1/r433/U18/O (AN2)                                  0.27       3.92 f
+  DRAM1/r433/U3/O (AN2)                                   0.27       4.19 f
+  DRAM1/r433/U4/O (AN2)                                   0.27       4.46 f
+  DRAM1/r433/U2/O (AN2)                                   0.27       4.73 f
+  DRAM1/r433/U11/O (AN2)                                  0.27       5.00 f
+  DRAM1/r433/U12/O (AN2)                                  0.27       5.27 f
+  DRAM1/r433/U13/O (AN2)                                  0.27       5.54 f
+  DRAM1/r433/U14/O (AN2)                                  0.27       5.81 f
+  DRAM1/r433/U15/O (AN2)                                  0.27       6.08 f
+  DRAM1/r433/U16/O (AN2)                                  0.27       6.35 f
+  DRAM1/r433/U17/O (AN2)                                  0.27       6.62 f
+  DRAM1/r433/U10/O (AN2)                                  0.27       6.89 f
+  DRAM1/r433/U28/O (AN2)                                  0.27       7.16 f
+  DRAM1/r433/U27/O (AN2)                                  0.27       7.43 f
+  DRAM1/r433/U26/O (AN2)                                  0.27       7.69 f
+  DRAM1/r433/U7/O (AN2)                                   0.27       7.96 f
+  DRAM1/r433/U6/O (AN2)                                   0.27       8.23 f
+  DRAM1/r433/U5/O (AN2)                                   0.27       8.50 f
+  DRAM1/r433/U25/O (AN2)                                  0.27       8.77 f
+  DRAM1/r433/U29/O (AN2)                                  0.25       9.02 f
+  DRAM1/r433/U1/O (XOR2HS)                                0.15       9.17 f
+  DRAM1/r433/SUM[31] (DRAM_wrapper_DW01_add_1_DW01_add_147)
+                                                          0.00       9.17 f
+  DRAM1/U774/O (AO222)                                    0.46       9.62 f
+  DRAM1/U226/O (MOAI1S)                                   0.31       9.93 f
+  DRAM1/ARADDR_reg_reg_31_/D (QDFFRBN)                    0.00       9.93 f
+  data arrival time                                                  9.93
+
+  clock dram_clk (rise edge)                             30.40      30.40
+  clock network delay (ideal)                             1.00      31.40
+  clock uncertainty                                      -0.10      31.30
+  DRAM1/ARADDR_reg_reg_31_/CK (QDFFRBN)                   0.00      31.30 r
+  library setup time                                     -0.14      31.16
+  data required time                                                31.16
+  --------------------------------------------------------------------------
+  data required time                                                31.16
+  data arrival time                                                 -9.93
+  --------------------------------------------------------------------------
+  slack (MET)                                                       21.23
+
+
+  Startpoint: AXI1/interface_s/arfifo_s0/rempty_reg
+              (rising edge-triggered flip-flop clocked by rom_clk)
+  Endpoint: ROM1/current_state_reg
+            (rising edge-triggered flip-flop clocked by rom_clk)
+  Path Group: rom_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                enG2000K              fsa0m_a_generic_core_ss1p62v125c
+  interface_slave    enG30K                fsa0m_a_generic_core_ss1p62v125c
+  ROM_wrapper        enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock rom_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  AXI1/interface_s/arfifo_s0/rempty_reg/CK (DFFSBN)       0.00       1.00 r
+  AXI1/interface_s/arfifo_s0/rempty_reg/Q (DFFSBN)        0.38       1.38 f
+  AXI1/interface_s/arfifo_s0/rempty (async_fifo_FIFO_DATASIZE49_12)
+                                                          0.00       1.38 f
+  AXI1/interface_s/U388/O (INV1S)                         0.58       1.96 r
+  AXI1/interface_s/ARVALID_S0_o (interface_slave)         0.00       1.96 r
+  AXI1/ARVALID_S0_o (AXI)                                 0.00       1.96 r
+  ROM1/ARVALID (ROM_wrapper)                              0.00       1.96 r
+  ROM1/U52/O (BUF1CK)                                     0.63       2.59 r
+  ROM1/U44/O (INV1S)                                      0.22       2.80 f
+  ROM1/U41/O (BUF1CK)                                     0.50       3.31 f
+  ROM1/U39/O (NR2)                                        1.49       4.80 r
+  ROM1/U40/O (INV1S)                                      1.32       6.11 f
+  ROM1/U55/O (OAI12HS)                                    0.30       6.42 r
+  ROM1/current_state_reg/D (QDFFRBN)                      0.00       6.42 r
+  data arrival time                                                  6.42
+
+  clock rom_clk (rise edge)                              50.20      50.20
+  clock network delay (ideal)                             1.00      51.20
+  clock uncertainty                                      -0.10      51.10
+  ROM1/current_state_reg/CK (QDFFRBN)                     0.00      51.10 r
+  library setup time                                     -0.19      50.91
+  data required time                                                50.91
+  --------------------------------------------------------------------------
+  data required time                                                50.91
+  data arrival time                                                 -6.42
+  --------------------------------------------------------------------------
+  slack (MET)                                                       44.49
+
+
+  Startpoint: IM1/state_reg_2_
+              (rising edge-triggered flip-flop clocked by sram_clk)
+  Endpoint: IM1/AWADDR_reg_reg_31_
+            (rising edge-triggered flip-flop clocked by sram_clk)
+  Path Group: sram_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                enG2000K              fsa0m_a_generic_core_ss1p62v125c
+  SRAM_wrapper_1     enG500K               fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock sram_clk (rise edge)               0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  IM1/state_reg_2_/CK (QDFFRBN)            0.00       1.00 r
+  IM1/state_reg_2_/Q (QDFFRBN)             0.79       1.79 r
+  IM1/U10/O (INV1S)                        0.63       2.42 f
+  IM1/U95/O (NR2)                          0.84       3.25 r
+  IM1/U94/O (ND2)                          1.32       4.57 f
+  IM1/U8/O (INV2)                          1.89       6.46 r
+  IM1/U93/O (OAI12HS)                      0.78       7.24 f
+  IM1/U25/O (ND3)                          0.88       8.12 r
+  IM1/U24/O (BUF1CK)                       1.30       9.42 r
+  IM1/U23/O (INV1S)                        0.65      10.07 f
+  IM1/U56/O (OAI222S)                      0.89      10.96 r
+  IM1/AWADDR_reg_reg_31_/D (QDFFRBN)       0.00      10.96 r
+  data arrival time                                  10.96
+
+  clock sram_clk (rise edge)              11.00      11.00
+  clock network delay (ideal)              1.00      12.00
+  clock uncertainty                       -0.10      11.90
+  IM1/AWADDR_reg_reg_31_/CK (QDFFRBN)      0.00      11.90 r
+  library setup time                      -0.27      11.63
+  data required time                                 11.63
+  -----------------------------------------------------------
+  data required time                                 11.63
+  data arrival time                                 -10.96
+  -----------------------------------------------------------
+  slack (MET)                                         0.67
+
+
+1
