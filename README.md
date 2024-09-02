@@ -4,7 +4,7 @@
 * NIN model structure
   * We use NIN to improve the accurancy of detection with less parameter needed,
   * model structure :
-   ![image](https://github.com/user-attachments/assets/7783b0c6-9e93-4c0e-8ee4-49047fa08078)
+  ![image](https://github.com/user-attachments/assets/7783b0c6-9e93-4c0e-8ee4-49047fa08078)
 * Dataset
   * Source : GTSRB - German Traffic sign recognition ([kaggle](https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign "link"))
   * Number of classes: 43 (Traffic sign)
